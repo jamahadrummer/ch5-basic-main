@@ -1,118 +1,82 @@
 console.log("!!!SCRIPTRUN!!!")
-import * as ch5Crcomlib from "@crestron/ch5-crcomlib";
+import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
+import { publishEvent } from "@crestron/ch5-crcomlib";
+
+
+const launchBtnA = document.getElementById("launchBtnA");
+const launchBtnB = document.getElementById("launchBtnB");
+const launchBtnC = document.getElementById("launchBtnC");
+const footBtnA = document.getElementById("footBtnA");
+const footBtnB = document.getElementById("footBtnB");
+const footBtnC = document.getElementById("footBtnC");
+const footBtnD = document.getElementById("footBtnD");
+const footBtnE = document.getElementById("footBtnE");
 
 
 
-// const launchBtnA = document.getElementById("btn_20");
-// const launchBtnB = document.getElementById("btn_21");
-// const launchBtnC = document.getElementById("btn_22");
-// const instHide = document.getElementsByTagName("H3");
-// // const footBtnA   = document.getElementById("footBtnA");
-// // const footBtnB   = document.getElementById("footBtnB");
-// // const footBtnC   = document.getElementById("footBtnC");
-// // const footBtnD   = document.getElementById("footBtnD");
-// // const footBtnE   = document.getElementById("footBtnE");
-// const srcBtnA   = document.getElementById("btn_30");
-// // const srcBtnB   = document.getElementById("btn_32");
-// // const srcBtnC   = document.getElementById("btn_33");
+
+function cresInteract(num1) {
+  console.log("Button has been Pushed");
+  publishEvent("b", num1 , "true");
+  console.log(num1,"High");
+  setTimeout(() => {
+    publishEvent("b", num1 , "false");
+  }, 2000);
+  console.log(num1,"Low")
+};
+
+
+launchBtnA.addEventListener("click", () => {
+  cresInteract("20")
+  location.href = "localPC.html";
+});
+
+launchBtnB.addEventListener("click", () => {
+  cresInteract("21")
+  location.href = "cable.html";
+});
+
+launchBtnC.addEventListener("click", () => {
+  cresInteract("22")
+  location.href = "appleTV.html";
+});
+
+footBtnA.addEventListener("click", () => {
+  cresInteract("60")
+  // location.href = "localPC.html";
+});
+
+footBtnB.addEventListener("click", () => {
+  cresInteract("61")
+  // location.href = "cable.html";
+});
+
+footBtnC.addEventListener("click", () => {
+  cresInteract("62")
+  // location.href = "appleTV.html";
+});
+
+footBtnD.addEventListener("click", () => {
+  cresInteract("63")
+  // location.href = "appleTV.html";
+});
+
+footBtnE.addEventListener("click", () => {
+  cresInteract("64")
+  // location.href = "appleTV.html";
+});
 
 // launchBtnA.addEventListener("click", () => {
-//     location.href = "localPC.html";
-//     console.log("PC button has been pushed");
-//     ch5Crcomlib.publishEvent("b", "20", "true");
-//     console.log("20 High");
-//     setTimeout(() => {
-//       ch5Crcomlib.publishEvent("b", "20", "false");
-//     }, 2000);
-//     console.log("20 Low")
-// })
+//         console.log("PC button has been pushed");
+//         publishEvent("b", "20", "true");
+//         console.log("20 High");
+//         setTimeout(() => {
+//           publishEvent("b", "20", "false");
+//         }, 2000);
+//         console.log("20 Low")
+//         location.href = "localPC.html";
+//     });
 
-// launchBtnB.addEventListener("click", () => {
-//     // location.href = "cable.html";
-//     console.log("Cable button has been pushed");
-//     ch5Crcomlib.publishEvent("b", "21", "true");
-//     console.log("21 High")
-//     setTimeout(() => {
-//       ch5Crcomlib.publishEvent("b", "21", "false");
-//     }, 2000);
-//     console.log("21 Low")
-//   });
+    // launchBtnA.addEventListener("click");
 
-//   launchBtnC.addEventListener("click", function () {
-//   // location.href = "appleTV.html";
-//   console.log("Apple button has been pushed");
-//   ch5Crcomlib.publishEvent("b", "22", "true");
-//   console.log("22 High")
-//     setTimeout(() => {
-//       ch5Crcomlib.publishEvent("b", "22", "false");
-//     }, 2000);
-//     console.log("22 Low");
-//   });
-
-//   // footBtnA.addEventListener("click", () => {
-//   //   // location.href = "index.html";
-//   //   console.log("Power");
-//   // });
-
-//   // footBtnB.addEventListener("click", () => {
-//   //   // location.href = "index.html";
-//   //   console.log("Settings");
-//   // });
-
-//   // footBtnC.addEventListener("click", () => {
-//   //   // location.href = "index.html";
-//   //   console.log("Vol Up");
-//   // });
-
-//   // footBtnD.addEventListener("click", () => {
-//   //   // location.href = "index.html";
-//   //   console.log("Vol Down");
-//   // });
-
-//   // footBtnE.addEventListener("click", () => {
-//   //   // location.href = "index.html";
-//   //   console.log("Vol Mute");
-//   // });
-
-//   // srcBtnA.addEventListener("click",() => {
-//   //   // location.href = "localPC.html";
-//   //   console.log("srcLocal PC")
-//   // });
-
-
-//   srcBtnA.addEventListener("click", function () {
-//     location.href = "localPC.html"; 
-//     console.log("PC button has been pushed");
-//     ch5Crcomlib.publishEvent("b", "1", "true");
-//     console.log("1 High")
-//       setTimeout(() => {
-//         ch5Crcomlib.publishEvent("b", "1", "false");
-//       }, 2000);
-//       console.log("1 Low")
-//   });
-  
-
-//   // // srcBtnB.addEventListener("click", function () {
-//   // // location.href = "cable.html";
-//   // // console.log("Cable button has been pushed");
-//   // // ch5Crcomlib.publishEvent("b", "2", "true");
-//   // // console.log("2 High")
-//   // //   setTimeout(() => {
-//   // //     ch5Crcomlib.publishEvent("b", "2", "false");
-//   // //   }, 2000);
-//   // //   console.log("2 Low")
-//   // // });
-
-//   // // srcBtnC.addEventListener("click", function () {
-//   // // location.href = "appleTV.html";
-//   // // console.log("Apple button has been pushed");
-//   // // ch5Crcomlib.publishEvent("b", "3", "true");
-//   // // console.log("3 High")
-//   // //   setTimeout(() => {
-//   // //     ch5Crcomlib.publishEvent("b", "3", "false");
-//   // //   }, 2000);
-//   // //   console.log("3 Low");
-//   // // });
-
-
-  console.log("!!!ENDSCRIPT!!!")
+console.log("!!!SCRIPTEND!!!")

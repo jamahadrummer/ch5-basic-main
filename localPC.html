@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css"/>
         <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
-        <script type="text/javascript" src="assets/js/index.js"></script>
     </head>
   <!-- End Header -->
 
@@ -21,77 +20,22 @@
             <h3>Local PC</h3>
             <h4>Please use the Keyboard<br>and Mouse to control the PC</h4>
         <p>
-            <ch5-button id="btn_31"
-                label=""
-                type="default"
-                customClass="srcBtn"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fas fa-laptop"
-                orientation="horizontal"
-                sendeventonclick="btn_31_clicked"
-                sendeventontouch="btn_31_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-            </ch5-button>
-            <script>
-                btn_31.addEventListener("click", () => {
-                location.href = "localPC.html";
-                console.log("PC button has been pushed");
-                ch5Crcomlib.publishEvent("b", "31", "true");
-                console.log("31 High");
-                setTimeout(() => {
-                ch5Crcomlib.publishEvent("b", "31", "false");
-                }, 2000);
-                console.log("31 Low")
-                })
-            </script>
-
-
-            </script>
+            <button class="srcBtn" id="srcBtnA">
+                <i class="fas fa-laptop"></i>
+        </button>
         <br><br><br><br><br>
-            <ch5-button id="btn_32"
-                label=""
-                type="default"
-                customClass="srcBtn"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fas fa-chalkboard-teacher"
-                orientation="horizontal"
-                sendeventonclick="btn_32_clicked"
-                sendeventontouch="btn_32_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-            </ch5-button>
+        <button class="srcBtn" id="srcBtnB">
+            <i class="fas fa-chalkboard-teacher"></i>
+    </button>
         <br><br><br><br><br>
-            <ch5-button id="btn_33"
-                label=""
-                type="default"
-                customClass="srcBtn"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fab fa-apple"
-                orientation="horizontal"
-                sendeventonclick="btn_33_clicked"
-                sendeventontouch="btn_33_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-            </ch5-button>
-
+        <button class="srcBtn" id="srcBtnC">
+            <i class="fab fa-apple"></i>
+    </button>
     </p>
         <footer>
                 <button class="footBtnL" id="footBtnA">
                     <i class="fas fa-power-off"></i>
-                <button class="footBtnL" id="footBtnA">
+                <button class="footBtnL" id="footBtnB">
                     <i class="fas fa-cogs"></i>
             <!-- </button>
                 <button class="launchBtn" id="launchBtnA">
@@ -104,13 +48,13 @@
                     <i class="fab fa-apple"></i>
             </button> -->
             <!-- Float:right inverts buttons, flipped up/mute to order properly -->
-                <button class="footBtnR" id="footBtnB">
+                <button class="footBtnR" id="footBtnC">
                     <i class="fas fa-volume-up"></i>
             </button>
-                <button class="footBtnR" id="footBtnC">
+                <button class="footBtnR" id="footBtnD">
                     <i class="fas fa-volume-down"></i>
             </button>
-                <button class="footBtnR" id="footBtnD">
+                <button class="footBtnR" id="footBtnE">
                     <i class="fas fa-volume-mute"></i>
             <!-- </button>
                 <button class="footBtn" id="footBtnC">
@@ -119,4 +63,5 @@
 
     </footer>
   </body>
+  <script type="text/javascript" src="assets/js/index1.js"></script>
 </html>

@@ -5,6 +5,8 @@
     align-items: center;
 } */
 
+:focus {outline:none;} ::-moz-focus-inner {border:0;}
+
 a {
     /* Link Color for Title (Might Break Future Links) */
     color: inherit;
@@ -12,7 +14,7 @@ a {
   }
 
 body {
-    background-color: rgb(14, 14, 82);
+    background-color: rgb(14, 14, 82, .90);
     color: #ffffff;
     margin: 0;
     flex-direction: column;
@@ -39,7 +41,7 @@ h4 {
 
 p {
     /* margin-top: 90px; */
-    margin-bottom: 225px;
+    margin-bottom: 229.5px;
     display: block;
     margin-block-start: 0%;
     /* justify-content: center; */
@@ -78,9 +80,10 @@ footer {
     /* Sizing and Position */
     box-sizing: border-box;
     padding: 10px 0;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    background-color: gray;
+    border: none;
+    /* border-top: 2px solid white; */
+    /* border-bottom: 2px solid white; */
+    background-color: rgb(128, 128, 128, .90);
     width: auto;
     margin: 0 auto;
     position: relative;
@@ -116,6 +119,7 @@ button {
 .srcBtn {
     float: left;
     align-items: flex-start;
+    margin-left: 5px;
 }
 
 .footBtnL {

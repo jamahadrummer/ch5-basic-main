@@ -7,10 +7,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CC A/V Conference Room</title>
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css"/>
         <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css"/>
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/custom-elements-es5-adapter.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <!-- End Header -->
 
@@ -18,97 +20,16 @@
     <body>
         <h1 class="title"><a href="./index.html">Commercial A/V Conference Room</a></h1>
             <h3>Please Select a Source</h3>
-        <p>
-            <ch5-button id="btn_20"
-                label=""
-                type="default"
-                customClass="customClass"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fas fa-laptop"
-                orientation="horizontal"
-                sendeventonclick="btn_20_clicked"
-                sendeventontouch="btn_20_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-                <script>
-                btn_20.addEventListener("click", () => {
-                // location.href = "localPC.html";
-                console.log("PC button has been pushed");
-                ch5Crcomlib.publishEvent("b", "20", "true");
-                console.log("20 High");
-                setTimeout(() => {
-                ch5Crcomlib.publishEvent("b", "20", "false");
-                }, 2000);
-                console.log("20 Low")
-                });
-            </script>
-        </ch5-button>
-            <ch5-button id="btn_21"
-                label=""
-                type="default"
-                customClass="customClass"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fas fa-chalkboard-teacher"
-                orientation="horizontal"
-                sendeventonclick="btn_21_clicked"
-                sendeventontouch="btn_21_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-        </ch5-button>
-        <script>
-            btn_21.addEventListener("click", () => {
-            // location.href = "localPC.html";
-            console.log("PC button has been pushed");
-            ch5Crcomlib.publishEvent("b", "21", "true");
-            console.log("21 High");
-            setTimeout(() => {
-            ch5Crcomlib.publishEvent("b", "21", "false");
-            }, 2000);
-            console.log("21 Low")
-            });
-        </script>
-            <ch5-button id="btn_22"
-                label=""
-                type="default"
-                customClass="customClass"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fab fa-apple"
-                orientation="horizontal"
-                sendeventonclick="btn_22_clicked"
-                sendeventontouch="btn_22_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-        </ch5-button>
-            <ch5-button id="btn_30"
-                label=""
-                type="primary"
-                customClass="launchBtn"
-                shape="rounded-rectangle"
-                size="regular"
-                stretch="both"
-                iconposition="first"
-                iconclass="fas fa-skull"
-                orientation="horizontal"
-                sendeventonclick="btn_30_clicked"
-                sendeventontouch="btn_30_touched"
-                receivestateselected=""
-                receivestatelabel=""
-                receivestatescriptlabelhtml="">
-        </ch5-button>
-        
-        
+        <p class="sources">
+            <button class="launchBtn" id="launchBtnA">
+                    <i class="fas fa-laptop"></i>
+            </button>
+                <button class="launchBtn" id="launchBtnB">
+                    <i class="fas fa-chalkboard-teacher"></i>
+            </button>
+                <button class="launchBtn" id="launchBtnC">
+                    <i class="fab fa-apple"></i>
+            </button>
     </p>
         <footer>
                 <button class="footBtnL" id="footBtnA">

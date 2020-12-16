@@ -6,7 +6,7 @@ const srcBtnA = document.getElementById("srcBtnA")
 const srcBtnB = document.getElementById("srcBtnB");
 const srcBtnC = document.getElementById("srcBtnC");
 const footBtnA = document.getElementById("footBtnA");
-const footBtnB = document.getElementById("footBtnB");
+const footBtnB = document.getElementById("footBtnA");
 const footBtnC = document.getElementById("footBtnC");
 const footBtnD = document.getElementById("footBtnD");
 const footBtnE = document.getElementById("footBtnE");
@@ -31,12 +31,12 @@ srcBtnA.addEventListener("click", () => {
 
 srcBtnB.addEventListener("click", () => {
   cresInteract("21")
-  location.href = "cable.html";
+  // location.href = "cable.html";
 });
 
 srcBtnC.addEventListener("click", () => {
   cresInteract("22")
-  location.href = "appleTV.html";
+  // location.href = "appleTV.html";
 });
 
 footBtnA.addEventListener("click", () => {

@@ -5,6 +5,8 @@
     align-items: center;
 } */
 
+:focus {outline:none;} ::-moz-focus-inner {border:0;}
+
 a {
     /* Link Color for Title (Might Break Future Links) */
     color: inherit;
@@ -36,7 +38,7 @@ h3.hidden {
 
 p {
     margin-top: 90px;
-    margin-bottom: 258px;
+    margin-bottom: 262px;
     display: flex;
     justify-content: center;
 }
@@ -77,9 +79,9 @@ footer {
     /* Sizing and Position */
     box-sizing: border-box;
     padding: 10px 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    background-color: gray;
+    /* border-top: 2px solid black; */
+    /* border-bottom: 2px solid black; */
+    background-color: rgb(128, 128, 128, .90);
     width: auto;
     margin: 0 auto;
     position: relative;
