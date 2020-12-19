@@ -1,10 +1,3 @@
-/* main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 :focus {outline:none;} ::-moz-focus-inner {border:0;}
 
 a {
@@ -21,9 +14,11 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Veranda", sans-serif;
+    display: flex;
 }
 
 h3 {
+    width: auto;
     margin-top: 75px;
     margin-bottom: 0px;
     display: flex;
@@ -44,7 +39,7 @@ h4 {
 
 p {
     /* margin-top: 90px; */
-    margin-bottom: 240px;
+    /* margin-bottom: 50px; */
     display: block;
     margin-block-start: 0%;
     /* justify-content: center; */
@@ -77,6 +72,7 @@ footer {
     /* display: flex; */
     /* align-items: flex-start; */
     height: 100px;
+    width: 1280px;
     /* padding: 0px 4px; */
 }
 
@@ -88,7 +84,7 @@ footer {
     /* border-top: 2px solid white; */
     /* border-bottom: 2px solid white; */
     background-color: rgb(128, 128, 128, .90);
-    width: auto;
+    width: 1280px;
     margin: 0 auto;
     position: relative;
     /* top: 20px; */
@@ -113,6 +109,47 @@ button {
     float: center;
     display: block;
 }
+
+#kpBtn1 {
+    /* margin: 25px; */
+    height: 90px;
+    width: 90px;
+    /* font-size: 12px; */
+    border-radius: 100%;
+}
+
+#kpBtn2 {
+    /* margin: 25px; */
+    height: 90px;
+    width: 90px;
+    /* font-size: 12px; */
+    border-radius: 100%;
+}
+
+#kpBtn3 {
+    /* margin: 25px; */
+    height: 90px;
+    width: 90px;
+    /* font-size: 12px; */
+    border-radius: 100%;
+}
+#kpBtn4 {
+     /* margin: 25px; */
+     height: 90px;
+     width: 90px;
+     /* font-size: 12px; */
+     border-radius: 100%;
+}
+
+#kpBtn5 {
+        /* margin: 25px; */
+        height: 90px;
+        width: 90px;
+        /* font-size: 12px; */
+        border-radius: 100%;
+}
+
+
 
 .launchBtn {
     transition-duration: 0.6s;
@@ -156,4 +193,27 @@ button {
     font-size: 60px;
     float: right;
 }
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: center;
+    margin-left: 450px;
+    margin-right: 450px;
+    margin-top: 25px;
+    
+  }
+  .keypad {
+    flex: 0 0 100px;                       /* don't grow, don't shrink, width */
+    height: 100px;
+    /* background-color: rgb(145, 19, 107); */
+    margin: 1px;
+  }
 
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 100px;                       /* don't grow, don't shrink, width */
+    height: 100px;
+    margin-top: 5px;
+  }
