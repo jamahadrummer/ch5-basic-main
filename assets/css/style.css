@@ -43,27 +43,6 @@ p {
     justify-content: center;
 }
 
-/* .launchBtn.overlay {
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 104px;
-    height: 348;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  } */
-
-/* .elementToFadeInAndOut {
-    animation: fadeInOut 6s linear forwards;
-}
-
-@keyframes fadeInOut {
-    100% { opacity:0; }
-    50% { opacity:1; }
-    0% { opacity:0; } 
-  
-} */
-
 footer {
     background-color: black;
     /* display: flex; */
@@ -107,6 +86,16 @@ button {
     justify-content: space-around;
     float: center; 
 }
+
+.elementToFadeInAndOut {
+    animation: fadeInOut 1s linear forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity:0; }
+    50% { opacity:1; } 
+    100% { opacity:0; } 
+   }
 
 .launchBtn {
     transition-duration: 0.6s;

@@ -24,20 +24,20 @@ function cresInteract(num1) {
 };
 
 
-srcBtnA.addEventListener("click", () => {
-  cresInteract("30")
-  location.href = "localPC.html";
-});
+// srcBtnA.addEventListener("click", () => {
+//   cresInteract("30")
+//   location.href = "localPC.html";
+// });
 
-srcBtnB.addEventListener("click", () => {
-  cresInteract("21")
-  location.href = "cable.html";
-});
+// srcBtnB.addEventListener("click", () => {
+//   cresInteract("21")
+//   location.href = "cable.html";
+// });
 
-srcBtnC.addEventListener("click", () => {
-  cresInteract("22")
-  location.href = "appleTV.html";
-});
+// srcBtnC.addEventListener("click", () => {
+//   cresInteract("22")
+//   location.href = "appleTV.html";
+// });
 
 footBtnA.addEventListener("click", () => {
   cresInteract("60")
@@ -62,6 +62,11 @@ footBtnD.addEventListener("click", () => {
 footBtnE.addEventListener("click", () => {
   cresInteract("64")
   // location.href = "appleTV.html";
+});
+
+footBtnF.addEventListener("click", () => {
+  // cresInteract("64")
+  location.href = "index.html";
 });
 
 
