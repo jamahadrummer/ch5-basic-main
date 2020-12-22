@@ -1,6 +1,6 @@
 console.log("!!!SCRIPTRUN!!!")
-import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
-import { publishEvent, subscribeState } from "@crestron/ch5-crcomlib";
+// import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
+import { publishEvent, subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
 
 const launchBtnA = document.getElementById("launchBtnA");
@@ -13,7 +13,7 @@ const footBtnD = document.getElementById("footBtnD");
 const footBtnE = document.getElementById("footBtnE");
 const btnFade = document.querySelector(".fadeButton");
 const eleFade = document.querySelector(".launchBtn");
-
+const sources = document.querySelector(".sources");
 
 
 // Each button recieves this function. Replace the 'num1' parameter with the Simpl Digital Join number desired
@@ -29,31 +29,54 @@ function cresInteract(num1) {
 
 // Animation Timing JS
 function fadeAnimate (){
-  eleFade.classList.add("elementToFadeInAndOut");
-  setTimeout(function(){
+  sources.classList.add("elementToFadeInAndOut");
+  setTimeout(() => {
       div.classList.remove("elementToFadeInAndOut");
     }, 4000);
 }
 
-function pageTurn (pageName) {
+const pageTurn = (pageName) => {
   location.href = pageName;
 }
 
+const pageTurnPC = () => {
+  location.href = "localPC.html";
+}
+
+const pageTurnCBL = () => {
+  location.href = "cable.html";
+}
+
+const pageTurnAPL = () => {
+  location.href = "appleTV.html";
+}
+
+// const pageTurnLog = () => {
+//   console.log('PageTurn');
+// };
+
+sources.addEventListener("click", () => {
+  fadeAnimate();
+});
+
 launchBtnA.addEventListener("click", () => {
   cresInteract("41");
-  setTimeout (fadeAnimate(), 4000);
-  pageTurn ("localPC.html");
+  setTimeout (function() {
+    pageTurn("localPC.html");
+  }, 1000);
   
 });
 
 launchBtnB.addEventListener("click", () => {
   cresInteract("42");
-  location.href = "cable.html";
+  fadeAnimate();
+  setTimeout (pageTurnCBL, 1000);
 });
 
 launchBtnC.addEventListener("click", () => {
   cresInteract("43");
-  location.href = "appleTV.html";
+  fadeAnimate();
+  setTimeout (pageTurnAPL, 1000);
 });
 
 footBtnA.addEventListener("click", () => {
