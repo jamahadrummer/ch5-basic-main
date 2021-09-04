@@ -1,6 +1,5 @@
 console.log("!!!SCRIPTRUN!!!")
-import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
-import { publishEvent } from "@crestron/ch5-crcomlib";
+import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
 
 const srcBtnA = document.getElementById("srcBtnA")
 const srcBtnB = document.getElementById("srcBtnB");

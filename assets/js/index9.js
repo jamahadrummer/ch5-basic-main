@@ -1,5 +1,5 @@
 console.log("!!!SCRIPTRUN!!!")
-import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
+import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
 
 document.querySelector(".sources").addEventListener("click", (event) => {
   console.log(event);
