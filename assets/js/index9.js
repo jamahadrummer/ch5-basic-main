@@ -18,7 +18,7 @@ document.querySelector(".sources").addEventListener("click", (event) => {
 // const srcBtnA   = document.getElementById("btn_30");
 // // const srcBtnB   = document.getElementById("btn_32");
 // // const srcBtnC   = document.getElementById("btn_33");
-function buttonPush (){
+function buttonPush() {
   console.log("PC button has been pushed");
 }
 
@@ -55,70 +55,70 @@ function buttonPush (){
 //     console.log("22 Low");
 //   });
 
-  // footBtnA.addEventListener("click", () => {
-  //   // location.href = "index.html";
-  //   console.log("Power");
-  // });
+// footBtnA.addEventListener("click", () => {
+//   // location.href = "index.html";
+//   console.log("Power");
+// });
 
-  // footBtnB.addEventListener("click", () => {
-  //   // location.href = "index.html";
-  //   console.log("Settings");
-  // });
+// footBtnB.addEventListener("click", () => {
+//   // location.href = "index.html";
+//   console.log("Settings");
+// });
 
-  // footBtnC.addEventListener("click", () => {
-  //   // location.href = "index.html";
-  //   console.log("Vol Up");
-  // });
+// footBtnC.addEventListener("click", () => {
+//   // location.href = "index.html";
+//   console.log("Vol Up");
+// });
 
-  // footBtnD.addEventListener("click", () => {
-  //   // location.href = "index.html";
-  //   console.log("Vol Down");
-  // });
+// footBtnD.addEventListener("click", () => {
+//   // location.href = "index.html";
+//   console.log("Vol Down");
+// });
 
-  // footBtnE.addEventListener("click", () => {
-  //   // location.href = "index.html";
-  //   console.log("Vol Mute");
-  // });
+// footBtnE.addEventListener("click", () => {
+//   // location.href = "index.html";
+//   console.log("Vol Mute");
+// });
 
-  // srcBtnA.addEventListener("click",() => {
-  //   // location.href = "localPC.html";
-  //   console.log("srcLocal PC")
-  // });
-
-
-  // srcBtnA.addEventListener("click", function () {
-  //   location.href = "localPC.html"; 
-  //   console.log("PC button has been pushed");
-  //   ch5Crcomlib.publishEvent("b", "1", "true");
-  //   console.log("1 High")
-  //     setTimeout(() => {
-  //       ch5Crcomlib.publishEvent("b", "1", "false");
-  //     }, 2000);
-  //     console.log("1 Low")
-  // });
-  
-
-  // // srcBtnB.addEventListener("click", function () {
-  // // location.href = "cable.html";
-  // // console.log("Cable button has been pushed");
-  // // ch5Crcomlib.publishEvent("b", "2", "true");
-  // // console.log("2 High")
-  // //   setTimeout(() => {
-  // //     ch5Crcomlib.publishEvent("b", "2", "false");
-  // //   }, 2000);
-  // //   console.log("2 Low")
-  // // });
-
-  // // srcBtnC.addEventListener("click", function () {
-  // // location.href = "appleTV.html";
-  // // console.log("Apple button has been pushed");
-  // // ch5Crcomlib.publishEvent("b", "3", "true");
-  // // console.log("3 High")
-  // //   setTimeout(() => {
-  // //     ch5Crcomlib.publishEvent("b", "3", "false");
-  // //   }, 2000);
-  // //   console.log("3 Low");
-  // // });
+// srcBtnA.addEventListener("click",() => {
+//   // location.href = "localPC.html";
+//   console.log("srcLocal PC")
+// });
 
 
-  console.log("!!!ENDSCRIPT!!!")
+// srcBtnA.addEventListener("click", function () {
+//   location.href = "localPC.html"; 
+//   console.log("PC button has been pushed");
+//   ch5Crcomlib.publishEvent("b", "1", "true");
+//   console.log("1 High")
+//     setTimeout(() => {
+//       ch5Crcomlib.publishEvent("b", "1", "false");
+//     }, 2000);
+//     console.log("1 Low")
+// });
+
+
+// // srcBtnB.addEventListener("click", function () {
+// // location.href = "cable.html";
+// // console.log("Cable button has been pushed");
+// // ch5Crcomlib.publishEvent("b", "2", "true");
+// // console.log("2 High")
+// //   setTimeout(() => {
+// //     ch5Crcomlib.publishEvent("b", "2", "false");
+// //   }, 2000);
+// //   console.log("2 Low")
+// // });
+
+// // srcBtnC.addEventListener("click", function () {
+// // location.href = "appleTV.html";
+// // console.log("Apple button has been pushed");
+// // ch5Crcomlib.publishEvent("b", "3", "true");
+// // console.log("3 High")
+// //   setTimeout(() => {
+// //     ch5Crcomlib.publishEvent("b", "3", "false");
+// //   }, 2000);
+// //   console.log("3 Low");
+// // });
+
+
+console.log("!!!ENDSCRIPT!!!")

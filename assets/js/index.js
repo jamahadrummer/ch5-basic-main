@@ -19,20 +19,20 @@ const sources = document.querySelector(".sources");
 // Each button recieves this function. Replace the 'num1' parameter with the Simpl Digital Join number desired
 function cresInteract(num1) {
   console.log("Button has been Pushed");
-  publishEvent("b", num1 , "true");
-  console.log(num1,"High");
+  publishEvent("b", num1, "true");
+  console.log(num1, "High");
   setTimeout(() => {
-    publishEvent("b", num1 , "false");
+    publishEvent("b", num1, "false");
   }, 2000);
-  console.log(num1,"Low")
+  console.log(num1, "Low")
 };
 
 // Animation Timing JS
-function fadeAnimate (){
+function fadeAnimate() {
   sources.classList.add("elementToFadeInAndOut");
   setTimeout(() => {
-      div.classList.remove("elementToFadeInAndOut");
-    }, 4000);
+    div.classList.remove("elementToFadeInAndOut");
+  }, 4000);
 }
 
 const pageTurn = (pageName) => {
@@ -61,22 +61,22 @@ sources.addEventListener("click", () => {
 
 launchBtnA.addEventListener("click", () => {
   cresInteract("41");
-  setTimeout (function() {
+  setTimeout(function () {
     pageTurn("localPC.html");
   }, 1000);
-  
+
 });
 
 launchBtnB.addEventListener("click", () => {
   cresInteract("42");
   fadeAnimate();
-  setTimeout (pageTurnCBL, 1000);
+  setTimeout(pageTurnCBL, 1000);
 });
 
 launchBtnC.addEventListener("click", () => {
   cresInteract("43");
   fadeAnimate();
-  setTimeout (pageTurnAPL, 1000);
+  setTimeout(pageTurnAPL, 1000);
 });
 
 footBtnA.addEventListener("click", () => {
@@ -115,6 +115,6 @@ footBtnE.addEventListener("click", () => {
 //         location.href = "localPC.html";
 //     });
 
-    // launchBtnA.addEventListener("click");
+// launchBtnA.addEventListener("click");
 
 console.log("!!!SCRIPTEND!!!")

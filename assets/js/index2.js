@@ -14,12 +14,12 @@ const footBtnE = document.getElementById("footBtnE");
 
 function cresInteract(num1) {
   console.log("PC button has been Pushed");
-  publishEvent("b", num1 , "true");
-  console.log(num1,"High");
+  publishEvent("b", num1, "true");
+  console.log(num1, "High");
   setTimeout(() => {
-    publishEvent("b", num1 , "false");
+    publishEvent("b", num1, "false");
   }, 2000);
-  console.log(num1,"Low")
+  console.log(num1, "Low")
 };
 
 
@@ -75,6 +75,6 @@ footBtnE.addEventListener("click", () => {
 //         location.href = "localPC.html";
 //     });
 
-    // launchBtnA.addEventListener("click");
+// launchBtnA.addEventListener("click");
 
 console.log("!!!SCRIPTEND!!!")

@@ -5,131 +5,140 @@
     align-items: center;
 } */
 
-:focus {outline:none;} ::-moz-focus-inner {border:0;}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
 
 a {
-    /* Link Color for Title (Might Break Future Links) */
-    color: inherit;
-    text-decoration: inherit;
-  }
+  /* Link Color for Title (Might Break Future Links) */
+  color: inherit;
+  text-decoration: inherit;
+}
 
 body {
-    background-color: rgb(14, 14, 82, 0.90);
-    color: #ffffff;
-    margin: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Veranda", sans-serif;
-    /* position: relative; */
+  background-color: rgb(14, 14, 82, 0.9);
+  color: #ffffff;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Veranda", sans-serif;
+  /* position: relative; */
 }
 
 h3 {
-    margin-top: 75px;
-    display: flex;
-    justify-content: center;
-    font-size: 60px;
-    /* visibility: hidden; */
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  /* visibility: hidden; */
 }
 
 h3.hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 p {
-    margin-top: 90px;
-    margin-bottom: 262px;
-    display: flex;
-    justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 262px;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
-    background-color: black;
-    /* display: flex; */
-    /* align-items: flex-start; */
-    height: 100px;
-    /* padding: 0px 4px; */
-    /* position: absolute; */
-    bottom: 0;
-
+  background-color: black;
+  /* display: flex; */
+  /* align-items: flex-start; */
+  height: 100px;
+  /* padding: 0px 4px; */
+  /* position: absolute; */
+  bottom: 0;
 }
 
 .title {
-    /* Sizing and Position */
-    box-sizing: border-box;
-    padding: 10px 0;
-    /* border-top: 2px solid black; */
-    /* border-bottom: 2px solid black; */
-    background-color: rgb(128, 128, 128, .90);
-    width: auto;
-    margin: 0 auto;
-    position: relative;
-    /* top: 20px; */
-    /* Font Choice */
-    font-size: 70px;
-    color: black;
-    text-emphasis: bold;
-    text-align: center;
+  /* Sizing and Position */
+  box-sizing: border-box;
+  padding: 10px 0;
+  /* border-top: 2px solid black; */
+  /* border-bottom: 2px solid black; */
+  background-color: rgb(128, 128, 128, 0.9);
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+  /* top: 20px; */
+  /* Font Choice */
+  font-size: 70px;
+  color: black;
+  text-emphasis: bold;
+  text-align: center;
 }
 
 button {
-    margin: 5px;
-    background-color: #7b6d8d6e;
-    border: none;
-    width: 150px;
-    border-radius: 10px;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 80px;
-    align-items: center;
-    justify-content: space-around;
-    float: center; 
+  margin: 5px;
+  background-color: #7b6d8d6e;
+  border: none;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 80px;
+  align-items: center;
+  justify-content: space-around;
+  float: center;
 }
 
 .elementToFadeInAndOut {
-    animation: fadeInOut 1s linear forwards;
+  animation: fadeInOut 1s linear forwards;
 }
 
 @keyframes fadeInOut {
-    0% { opacity:0; }
-    50% { opacity:1; } 
-    100% { opacity:0; } 
-   }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .launchBtn {
-    transition-duration: 0.6s;
-    transition-property: all;
-    float: inherit;
+  transition-duration: 0.6s;
+  transition-property: all;
+  float: inherit;
 }
 
 .mainBtn {
-    float: left;
-    align-items: flex-start;
+  float: left;
+  align-items: flex-start;
 }
 
 .footBtnL {
-    background-color: black;
-    float: left;
-    margin: 0;
-    padding-bottom: 0;
-    border-radius: 0;
-    height: 100px;
-    font-size: 60px;
+  background-color: black;
+  float: left;
+  margin: 0;
+  padding-bottom: 0;
+  border-radius: 0;
+  height: 100px;
+  font-size: 60px;
 }
 
 #footBtnB {
-    font-size: 40px;
-    width: 100px;
+  font-size: 40px;
+  width: 100px;
 }
 
 .footBtnR {
-    background-color: black;
-    margin: 0;
-    padding-bottom: 0;
-    border-radius: 0;
-    height: 100px;
-    font-size: 60px;
-    float: right;
+  background-color: black;
+  margin: 0;
+  padding-bottom: 0;
+  border-radius: 0;
+  height: 100px;
+  font-size: 60px;
+  float: right;
 }
-
