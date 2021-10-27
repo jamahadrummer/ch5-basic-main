@@ -2,12 +2,12 @@
   "name": "ch5-basic",
   "version": "1.0.1",
   "description": "Crestron CH5 Testing with Vanilla JS.",
-  "main": "index.js",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel *.html",
+    "start": "parcel index.html",
     "build": "parcel build *.html --public-url .",
-    "build:archive": "ch5-cli archive -p ch5_20201222 -d dist -o tsw"
+    "build:archive": "ch5-cli archive -p ch5_2021_10_27a -d dist -o tsw"
   },
   "author": "",
   "license": "ISC",
