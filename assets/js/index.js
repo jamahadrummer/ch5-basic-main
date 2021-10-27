@@ -19,10 +19,10 @@ const sources = document.querySelector(".sources");
 // Each button recieves this function. Replace the 'num1' parameter with the Simpl Digital Join number desired
 function cresInteract(num1) {
   console.log("Button has been Pushed");
-  publishEvent("b", num1, "true");
+  crComLib.publishEvent("b", num1, "true");
   console.log(num1, "High");
   setTimeout(() => {
-    publishEvent("b", num1, "false");
+    crComLib.publishEvent("b", num1, "false");
   }, 2000);
   console.log(num1, "Low")
 };
