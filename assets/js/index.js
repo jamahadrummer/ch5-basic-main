@@ -1,7 +1,13 @@
 console.log("!!!SCRIPTRUN!!!")
-// import * as ch5CrcomLib from "@crestron/ch5-crcomlib";
-import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
+const crComLib = require('/node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
+// import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
 
+
+// window.crComLib = crComLib;
+// window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
+// window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
+// window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
+// window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
 
 const launchBtnA = document.getElementById("launchBtnA");
 const launchBtnB = document.getElementById("launchBtnB");
@@ -34,6 +40,17 @@ function fadeAnimate() {
     div.classList.remove("elementToFadeInAndOut");
   }, 4000);
 }
+
+crComLib.subscribeState('s', 1, (value) => {
+  const elem = document.getElementById('room-name');
+  elem.innerHTML = value;
+});
+
+crComLib.subscribeState('s', 2, (value) => {
+  const elem = document.getElementsByClassName('subtitle');
+  elem.innerHTML = value;
+});
+
 
 const pageTurn = (pageName) => {
   location.href = pageName;
