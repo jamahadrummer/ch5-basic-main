@@ -1,7 +1,7 @@
 {
-  "name": "ch5-basic-master",
-  "version": "1.0.0",
-  "description": "This example shows very basic usage of the Crestron Com Package with Vanilla JS. Its designed to help those just starting out learn some of the basics of taking HTML, CSS, and Javascript files communicate via a TSW touch panel to a processor. I've tried to put as many comments as possible in these files. As I add more examples I will be putting them into different branches and will update this readme on which branch shows what example.",
+  "name": "ch5-basic",
+  "version": "1.0.1",
+  "description": "Crestron CH5 Testing with Vanilla JS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,12 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@crestron/ch5-crcomlib": "^1.0.0",
-    "@crestron/ch5-theme": "^1.0.0",
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "parcel-bundler": "^1.12.4"
+    "@crestron/ch5-crcomlib": "^1.1.2",
+    "@fortawesome/fontawesome-free": "^5.15.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.1"
+    "@crestron/ch5-utilities-cli": "^0.1.52",
+    "eslint": "^8.0.1",
+    "parcel": "^2.0.0"
   }
 }
