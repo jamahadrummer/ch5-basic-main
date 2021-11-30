@@ -1,10 +1,10 @@
-console.log("!!!SCRIPTRUN!!!")
+console.log("!!!SCRIPTRUN!!!");
 import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
 
 document.querySelector(".sources").addEventListener("click", (event) => {
-  console.log(event);
+	console.log(event);
 
-})
+});
 
 // const launchBtnA = document.getElementById("btn_20");
 // const launchBtnB = document.getElementById("btn_21");
@@ -19,7 +19,7 @@ document.querySelector(".sources").addEventListener("click", (event) => {
 // // const srcBtnB   = document.getElementById("btn_32");
 // // const srcBtnC   = document.getElementById("btn_33");
 function buttonPush() {
-  console.log("PC button has been pushed");
+	console.log("PC button has been pushed");
 }
 
 // launchBtnA.addEventListener("click", () => {
@@ -121,4 +121,4 @@ function buttonPush() {
 // // });
 
 
-console.log("!!!ENDSCRIPT!!!")
+console.log("!!!ENDSCRIPT!!!");

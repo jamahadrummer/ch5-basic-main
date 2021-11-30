@@ -1,23 +1,24 @@
 {
-  "name": "ch5-basic",
-  "version": "1.0.1",
-  "description": "Crestron CH5 Testing with Vanilla JS.",
-  
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build *.html --public-url .",
-    "build:archive": "ch5-cli archive -p ch5_2021_10_27a -d dist -o tsw"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@crestron/ch5-crcomlib": "^1.1.2",
-    "@fortawesome/fontawesome-free": "^5.15.1"
-  },
-  "devDependencies": {
-    "@crestron/ch5-utilities-cli": "^0.1.52",
-    "eslint": "^8.0.1",
-    "parcel": "^2.0.0"
-  }
+	"name": "ch5-basic",
+	"version": "2.0.1",
+	"description": "Crestron CH5 Testing with Vanilla JS.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx webpack --config webpack.config.js",
+		"archive": "ch5-cli archive -p ch5_2021_11_19f -d dist -o tsw"
+	},
+	"author": "Daniel Jama",
+	"license": "MIT",
+	"dependencies": {
+		"@crestron/ch5-crcomlib": "^1.1.2",
+		"@fortawesome/fontawesome-free": "^5.15.1"
+	},
+	"devDependencies": {
+		"@crestron/ch5-utilities-cli": "^0.1.52",
+		"copy-webpack-plugin": "^10.0.0",
+		"eslint": "^8.0.1",
+		"webpack": "^5.64.4",
+		"webpack-cli": "^4.9.1",
+		"webpack-dev-server": "^4.6.0"
+	}
 }
