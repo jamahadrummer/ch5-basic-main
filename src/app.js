@@ -80,7 +80,7 @@ function cresInteract(num1) {
 	console.log(num1, 'High');
 	setTimeout(() => {
 		crComLib.publishEvent('b', num1, 'false');
-	}, 2000);
+	}, 500);
 	console.log(num1, 'Low');
 };
 

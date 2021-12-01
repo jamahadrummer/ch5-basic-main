@@ -1,7 +1,9 @@
 /*
-	Josh Comeau
-	CSS Custom Reset
-	https://www.joshwcomeau.com/css/custom-css-reset/
+//////////////////////////////////////////////////////
+////Josh Comeau
+////CSS Custom Reset
+////https://www.joshwcomeau.com/css/custom-css-reset/
+//////////////////////////////////////////////////////
 */
 /*
 	1. Use a more-intuitive box-sizing model.
@@ -73,7 +75,9 @@ h6 {
 	isolation: isolate;
 }
 /*
-	End Custom Reset
+//////////////////////////
+////End Custom Reset//////
+//////////////////////////
 */
 
 :focus {
@@ -83,19 +87,19 @@ h6 {
 	border: 0;
 }
 
-a {
-	/* Link Color for Title (Might Break Future Links) */
+/* a {
+	/* Link Color for Title (Might Break Future Links) 
 	color: inherit;
 	text-decoration: inherit;
 }
+*/
 
 body {
 	background-color: rgb(14, 14, 82, 0.9);
 	color: #ffffff;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: space-between;
+	justify-content: flex-start;
 	font-family: 'Veranda', sans-serif;
 }
 
@@ -113,41 +117,57 @@ body {
 	text-emphasis: bold;
 	text-align: center;
 }
+.src {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	/* height: 400px; */
+}
 
 .subtitle {
-	margin-top: 20px;
 	display: flex;
-	justify-content: center;
-	font-size: 60px;
-	/* visibility: hidden; */
+	justify-content: space-around;
+	font-size: 50px;
 }
 
 h3.hidden {
 	visibility: hidden;
 }
 
-.src {
-	/* margin-top: 90px; */
-	/* margin-bottom: 262px; */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: space-between;
-}
-
 .srcBtns {
 	display: flex;
 	justify-content: center;
+	gap: 20px;
+	box-shadow: black;
 }
 
-footer {
+.launchBtn {
+	transition-duration: 0.6s;
+	transition-property: all;
+	float: inherit;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.footContainer {
+	justify-self: flex-end;
+}
+
+.foot {
 	background-color: black;
-	/* display: flex; */
-	/* align-items: flex-start; */
 	height: 100px;
-	/* padding: 0px 4px; */
-	/* position: absolute; */
-	bottom: 0;
+	width: 100%;
+	align-self: flex-end;
 }
 
 button {
@@ -167,24 +187,6 @@ button {
 
 .elementToFadeInAndOut {
 	animation: fadeInOut 1s linear forwards;
-}
-
-@keyframes fadeInOut {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.launchBtn {
-	transition-duration: 0.6s;
-	transition-property: all;
-	float: inherit;
 }
 
 .mainBtn {
