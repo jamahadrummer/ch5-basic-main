@@ -99,8 +99,9 @@ body {
 	color: #ffffff;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	font-family: 'Veranda', sans-serif;
+	width: 100%;
 }
 
 .title,
@@ -116,6 +117,10 @@ body {
 	color: black;
 	text-emphasis: bold;
 	text-align: center;
+}
+
+#titleBtn {
+	background-color: rgba(255, 255, 255, 0);
 }
 .src {
 	display: flex;
