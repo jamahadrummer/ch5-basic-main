@@ -56,17 +56,14 @@ const eleFade = document.querySelector('.launchBtn');
 const sources = document.querySelector('.src');
 
 //Digital Join function and listeners
-function onClick1(digitalJoin) {
-	crComLib.publishEvent('b', digitalJoin, true);
-	crComLib.publishEvent('b', digitalJoin, false);
-}
-launchBtnA.addEventListener('click', onClick1('1'));
-launchBtnB.addEventListener('click', onClick1('2'));
-launchBtnC.addEventListener('click', onClick1('3'));
-
-
-
-footBtnA.addEventListener('click', onClick1('4'));
+// function onClick1(digitalJoin) {
+// 	crComLib.publishEvent('b', digitalJoin, true);
+// 	crComLib.publishEvent('b', digitalJoin, false);
+// }
+// launchBtnA.addEventListener('click', onClick1('1'));
+// launchBtnB.addEventListener('click', onClick1('2'));
+// launchBtnC.addEventListener('click', onClick1('3'));
+// footBtnA.addEventListener('click', onClick1('4'));
 
 
 
@@ -129,13 +126,15 @@ const pageTurn = (pageName) => {
 // };
 ///////////////////////////////////////////
 
+titleBtn.addEventListener('click', () => {
+	pageTurn('index.html');
+});
+
+
 sources.addEventListener('click', () => {
 	fadeAnimate();
 });
 
-titleBtn.addEventListener('click', () => {
-		pageTurn('index.html');
-});
 
 launchBtnA.addEventListener('click', () => {
 	cresInteract('41');
@@ -146,14 +145,16 @@ launchBtnA.addEventListener('click', () => {
 
 launchBtnB.addEventListener('click', () => {
 	cresInteract('42');
-	fadeAnimate();
-	setTimeout(pageTurnCBL, 1000);
+	setTimeout(function () {
+		pageTurn('cable.html');
+	}, 1000);
 });
 
 launchBtnC.addEventListener('click', () => {
 	cresInteract('43');
-	fadeAnimate();
-	setTimeout(pageTurnAPL, 1000);
+	setTimeout(function () {
+		pageTurn('appleTV.html');
+	}, 1000);
 });
 
 footBtnA.addEventListener('click', () => {
