@@ -21,10 +21,10 @@ module.exports = function (env) {
 		plugins: [
 			new CopyPlugin({
 				patterns: [
-					// {
-					// 	from: env.source + '/assets',
-					// 	to: 'assets/'
-					// },
+					{
+						from: env.source + '/assets',
+						to: 'assets/'
+					},
 					{
 						from: env.source + '/*.(html|css)',
 						to: '[name][ext]'

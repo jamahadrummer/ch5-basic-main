@@ -1,13 +1,45 @@
-console.log("!!!SCRIPTRUN!!!");
-const crComLib = require('/node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
-// import * as crComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
+// Unused Xpanel Config //
+//////////////////////////
+// const webXpanel = require('@crestron/ch5-webxpanel/dist/cjs/index.js');
 
+// const configuration = {
+//     host: '192.168.115.24',
+//     ipId: '79'
+// };
 
-// window.crComLib = crComLib;
-// window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
-// window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
-// window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
-// window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
+// if (webXpanel.isActive) {
+//     console.log(`WebXPanel version: ${webXpanel.getVersion()}`);
+//     console.log(`WebXPanel build date: ${webXpanel.getBuildDate()}`);
+
+//     webXpanel.default.initialize(configuration);
+// }
+// else {
+//     console.log('Skipping WebXPanel since running on touchpanel');
+// }
+
+// Info from 'Jared - Status Controls' - utroda#5159 on Crestron discord
+////////////////////////////////////////////////////////////////////////////
+//The amd and cjs module types do not create or expose any global objects
+// or functions.Projects created by advanced JavaScript developers using
+// amd and cjs modules must expose four functions from the Crestron CH5
+//communications library to allow the control systems communications to
+//be received by the CH5 library.As example for cjs projects, the following
+//code should be executed at startup of the project. 
+////////////////////////////////////////////////////////////////////////////
+// import { bridgeReceiveIntegerFromNative, bridgeReceiveBooleanFromNative, bridgeReceiveStringFromNative, bridgeReceiveObjectFromNative }
+// 	from '@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib';
+// window['bridgeReceiveIntegerFromNative'] = bridgeReceiveIntegerFromNative;
+// window['bridgeReceiveBooleanFromNative'] = bridgeReceiveBooleanFromNative;
+// window['bridgeReceiveStringFromNative'] = bridgeReceiveStringFromNative;
+// window['bridgeReceiveObjectFromNative'] = bridgeReceiveObjectFromNative;
+
+const crComLib = require('../node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
+
+window.crComLib = crComLib;
+window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
+window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
+window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
+window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
 
 const launchBtnA = document.getElementById("launchBtnA");
 const launchBtnB = document.getElementById("launchBtnB");
@@ -21,8 +53,28 @@ const btnFade = document.querySelector(".fadeButton");
 const eleFade = document.querySelector(".launchBtn");
 const sources = document.querySelector(".sources");
 
+//Digital Join function and listeners
+function onClick1(digitalJoin) {
+	crComLib.publishEvent('b', digitalJoin, true);
+	crComLib.publishEvent('b', digitalJoin, false);
+}
+launchBtnA.addEventListener('click', onClick1('1'));
+launchBtnB.addEventListener('click', onClick1('2'));
+launchBtnC.addEventListener('click', onClick1('3'));
 
-// Each button recieves this function. Replace the 'num1' parameter with the Simpl Digital Join number desired
+
+
+footBtnA.addEventListener('click', onClick1('4'));
+
+
+
+
+
+
+
+
+// Each button recieves this function. Replace the 'num1'
+//parameter with the Simpl Digital Join number desired
 function cresInteract(num1) {
 	console.log("Button has been Pushed");
 	crComLib.publishEvent("b", num1, "true");

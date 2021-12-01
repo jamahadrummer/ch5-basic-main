@@ -8,38 +8,35 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CC A/V Conference Room</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-	<link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="/assets/css/style.css" />
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+	<link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css" />
 	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js" type="text/javascript"
 		charset="utf-8"></script>
 	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/custom-elements-es5-adapter.js"
 		type="text/javascript" charset="utf-8"></script>
 </head>
-<!-- End Header -->
-
-<!-- Start Layout -->
 
 <body>
 	<h1 class="title"><a href="./index.html">Commercial A/V Conference Room</a></h1>
 	<h3 class="subtitle"></h3>
 	<p class="sources">
 		<button class="launchBtn" id="launchBtnA">
-			<i class="fas fa-laptop"></i>
+			<i class="fas fa-laptop">btn</i>
 		</button>
 		<button class="launchBtn" id="launchBtnB">
 			<i class="fas fa-chalkboard-teacher"></i>
 		</button>
 		<button class="launchBtn" id="launchBtnC">
-			<i class="fab fa-apple"></i>
+			<i class="fab fa-apple">btn</i>
 		</button>
 	</p>
 	<footer>
 		<button class="footBtnL" id="footBtnA">
-			<i class="fas fa-power-off"></i>
+			<i class="fas fa-power-off">btn</i>
 			<button class="footBtnL" id="footBtnB">
-				<i class="fas fa-cogs"></i>
+				<i class="fas fa-cogs">btn</i>
 			</button>
 			<!-- <button class="launchBtn" id="launchBtnA">
                     <i class="fas fa-laptop"></i>
@@ -52,16 +49,16 @@
             </button> -->
 			<!-- Float:right inverts buttons, flipped up/mute to order properly -->
 			<button class="footBtnR" id="footBtnC">
-				<i class="fas fa-volume-up"></i>
+				<i class="fas fa-volume-up">btn</i>
 			</button>
 			<button class="footBtnR" id="footBtnD">
-				<i class="fas fa-volume-down"></i>
+				<i class="fas fa-volume-down">btn</i>
 			</button>
 			<button class="footBtnR" id="footBtnE">
-				<i class="fas fa-volume-mute"></i>
+				<i class="fas fa-volume-mute">btn</i>
 	</footer>
+	<script src="bundle.js"></script>
 </body>
-<script type="module" src="node_modules\@crestron\ch5-crcomlib\build_bundles\cjs\cr-com-lib.js"></script>
-<script type="module" src="assets/js/index.js"></script>
+
 
 </html>
