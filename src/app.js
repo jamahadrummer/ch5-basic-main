@@ -41,6 +41,7 @@ window.bridgeReceiveBooleanFromNative = crComLib.bridgeReceiveBooleanFromNative;
 window.bridgeReceiveStringFromNative = crComLib.bridgeReceiveStringFromNative;
 window.bridgeReceiveObjectFromNative = crComLib.bridgeReceiveObjectFromNative;
 
+const titleBtn = document.getElementById('titleBtn');
 const launchBtnA = document.getElementById('launchBtnA');
 const launchBtnB = document.getElementById('launchBtnB');
 const launchBtnC = document.getElementById('launchBtnC');
@@ -49,10 +50,10 @@ const footBtnB = document.getElementById('footBtnB');
 const footBtnC = document.getElementById('footBtnC');
 const footBtnD = document.getElementById('footBtnD');
 const footBtnE = document.getElementById('footBtnE');
-const homeBtn = document.getElementById('homeBtn');
+// const homeBtn = document.getElementById('homeBtn');
 const btnFade = document.querySelector('.fadeButton');
 const eleFade = document.querySelector('.launchBtn');
-const sources = document.querySelector('.sources');
+const sources = document.querySelector('.src');
 
 //Digital Join function and listeners
 function onClick1(digitalJoin) {
@@ -94,15 +95,15 @@ function fadeAnimate() {
 	}, 4000);
 }
 
-crComLib.subscribeState('s', 1, (value) => {
-	const elem = document.getElementById('room-name');
-	elem.innerHTML = value;
-});
+// crComLib.subscribeState('s', 1, (value) => {
+// 	const elem = document.getElementById('room-name');
+// 	elem.innerHTML = value;
+// });
 
-crComLib.subscribeState('s', 2, (value) => {
-	const elem = document.getElementsByClassName('subtitle');
-	elem.innerHTML = value;
-});
+// crComLib.subscribeState('s', 2, (value) => {
+// 	const elem = document.getElementsByClassName('subtitle');
+// 	elem.innerHTML = value;
+// });
 
 
 const pageTurn = (pageName) => {
@@ -130,6 +131,10 @@ const pageTurn = (pageName) => {
 
 sources.addEventListener('click', () => {
 	fadeAnimate();
+});
+
+titleBtn.addEventListener('click', () => {
+		pageTurn('index.html');
 });
 
 launchBtnA.addEventListener('click', () => {
@@ -176,10 +181,10 @@ footBtnE.addEventListener('click', () => {
 	// location.href = 'appleTV.html';
 });
 
-homeBtn.addEventListener('click', () => {
-	cresInteract('64');
-	location.href = 'index.html'
-});
+// homeBtn.addEventListener('click', () => {
+// 	cresInteract('64');
+// 	location.href = 'index.html'
+// });
 
 // launchBtnA.addEventListener('click', () => {
 //         console.log('PC button has been pushed');
