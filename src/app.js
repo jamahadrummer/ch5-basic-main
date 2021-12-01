@@ -36,10 +36,10 @@
 const crComLib = require('../node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
 
 window.crComLib = crComLib;
-window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
-window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
-window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
-window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
+window.bridgeReceiveIntegerFromNative = crComLib.bridgeReceiveIntegerFromNative;
+window.bridgeReceiveBooleanFromNative = crComLib.bridgeReceiveBooleanFromNative;
+window.bridgeReceiveStringFromNative = crComLib.bridgeReceiveStringFromNative;
+window.bridgeReceiveObjectFromNative = crComLib.bridgeReceiveObjectFromNative;
 
 const launchBtnA = document.getElementById("launchBtnA");
 const launchBtnB = document.getElementById("launchBtnB");

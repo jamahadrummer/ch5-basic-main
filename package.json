@@ -4,6 +4,7 @@
 	"description": "Crestron CH5 Testing with Vanilla JS.",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"liveserver": "npx webpack serve",
 		"build": "npx webpack --config webpack.config.js",
 		"archive": "ch5-cli archive -p ch5_2021_11_19f -d dist -o tsw"
 	},
