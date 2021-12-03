@@ -99,9 +99,10 @@ body {
 	color: #ffffff;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	font-family: 'Veranda', sans-serif;
-	width: 100%;
+	width: 1280px;
+	height: 800px;
 }
 
 .title,
@@ -126,7 +127,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
-	/* height: 400px; */
+	padding: 20px 0 255px;
 }
 
 .subtitle {
