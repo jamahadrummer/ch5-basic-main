@@ -101,56 +101,57 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	font-family: 'Veranda', sans-serif;
-	width: 1280px;
-	height: 800px;
+	width: auto;
+	margin: 0;
 }
 
-.title,
-#titleBtn {
+.title {
+	/* Display Properties */
+	display: inherit;
+	justify-content: space-around;
 	background-color: rgb(128, 128, 128, 0.9);
-	width: 100%;
-	align-self: flex-start;
-	/* margin: 0 auto; */
-	/* position: relative; */
-	/* top: 20px; */
 	/* Font Choice */
 	font-size: 70px;
 	color: black;
-	text-emphasis: bold;
-	text-align: center;
 }
 
 #titleBtn {
 	background-color: rgba(255, 255, 255, 0);
-}
-.src {
-	display: flex;
-	flex-direction: column;
-	gap: 100px;
-	padding: 20px 0 255px;
+	border: 0;
+	padding: 10px 30px;
+	font-weight: bold;
 }
 
 .subtitle {
-	display: flex;
+	display: inherit;
+	padding: 50px 0;
 	justify-content: space-around;
 	font-size: 50px;
+	color: gainsboro;
 }
 
-h3.hidden {
-	visibility: hidden;
+.src {
+	display: inherit;
+	justify-content: space-around;
+	flex-grow: 1;
 }
 
 .srcBtns {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	box-shadow: black;
+	display: inherit;
+	justify-content: space-between;
+	gap: 50px;
+	align-items: flex-start;
 }
 
 .launchBtn {
+	background-color: gainsboro;
+	height: 150px;
+	width: 150px;
+	border-radius: 15px;
+	border: 0;
 	transition-duration: 0.6s;
 	transition-property: all;
-	float: inherit;
+	font-size: 75px;
 }
 
 @keyframes fadeInOut {
@@ -165,62 +166,35 @@ h3.hidden {
 	}
 }
 
-.footContainer {
-	justify-self: flex-end;
-}
-
 .foot {
+	display: inherit;
 	background-color: black;
 	height: 100px;
-	width: 100%;
-	align-self: flex-end;
+	justify-content: space-between;
+	/* width: 100%; */
+	/* align-self: flex-end; */
 }
 
-button {
-	margin: 5px;
-	background-color: #7b6d8d6e;
-	border: none;
-	width: 150px;
-	border-radius: 10px;
+.footLeft {
+	display: inherit;
+	gap: 10px;
+	padding-left: 10px;
+}
+
+.footRight {
+	display: inherit;
+	gap: 10px;
+	padding-right: 10px;
+}
+
+.footBtn {
+	width: 100px;
+	background-color: black;
 	color: white;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 80px;
-	align-items: center;
-	justify-content: space-around;
-	float: center;
+	font-size: 40px;
+	border: 0;
 }
 
 .elementToFadeInAndOut {
 	animation: fadeInOut 1s linear forwards;
-}
-
-.mainBtn {
-	float: left;
-	align-items: flex-start;
-}
-
-.footBtnL {
-	background-color: black;
-	float: left;
-	margin: 0;
-	padding-bottom: 0;
-	border-radius: 0;
-	height: 100px;
-	font-size: 60px;
-}
-
-#footBtnB {
-	font-size: 40px;
-	width: 100px;
-}
-
-.footBtnR {
-	background-color: black;
-	margin: 0;
-	padding-bottom: 0;
-	border-radius: 0;
-	height: 100px;
-	font-size: 60px;
-	float: right;
 }

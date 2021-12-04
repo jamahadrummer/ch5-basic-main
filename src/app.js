@@ -66,7 +66,16 @@ const sources = document.querySelector('.src');
 // footBtnA.addEventListener('click', onClick1('4'));
 
 
+var docWidth = document.documentElement.offsetWidth;
 
+[].forEach.call(
+	document.querySelectorAll('*'),
+	function (el) {
+		if (el.offsetWidth > docWidth) {
+			console.log(el);
+		}
+	}
+);
 
 
 

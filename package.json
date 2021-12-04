@@ -6,7 +6,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"liveserver": "npx webpack serve",
 		"build": "npx webpack --config webpack.config.js",
-		"archive": "ch5-cli archive -p ch5basic_2021_12_03 -d dist -o tsw"
+		"archive": "ch5-cli archive -p ch5basic_2021_12_04 -d dist -o tsw"
 	},
 	"author": "Daniel Jama",
 	"license": "MIT",
