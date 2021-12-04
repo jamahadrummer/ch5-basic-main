@@ -52,8 +52,11 @@ const footBtnD = document.getElementById('footBtnD');
 const footBtnE = document.getElementById('footBtnE');
 // const homeBtn = document.getElementById('homeBtn');
 const btnFade = document.querySelector('.fadeButton');
-const eleFade = document.querySelector('.launchBtn');
-const sources = document.querySelector('.src');
+// eleFade is what I want to fade
+const eleFade1 = document.querySelector('.srcBtns')
+const eleFade2 = document.querySelector('.subtitleText')
+// fadeClick is what I want to trigger fade
+const fadeClick = document.querySelector('.launchBtn');
 
 //Digital Join function and listeners
 // function onClick1(digitalJoin) {
@@ -64,21 +67,6 @@ const sources = document.querySelector('.src');
 // launchBtnB.addEventListener('click', onClick1('2'));
 // launchBtnC.addEventListener('click', onClick1('3'));
 // footBtnA.addEventListener('click', onClick1('4'));
-
-
-var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-	document.querySelectorAll('*'),
-	function (el) {
-		if (el.offsetWidth > docWidth) {
-			console.log(el);
-		}
-	}
-);
-
-
-
 
 
 // Each button recieves this function. Replace the 'num1'
@@ -95,7 +83,8 @@ function cresInteract(num1) {
 
 // Animation Timing JS
 function fadeAnimate() {
-	sources.classList.add('elementToFadeInAndOut');
+	eleFade1.classList.add('elementToFadeInAndOut');
+	eleFade2.classList.add('elementToFadeInAndOut');
 	setTimeout(() => {
 		div.classList.remove('elementToFadeInAndOut');
 	}, 4000);
@@ -140,7 +129,7 @@ titleBtn.addEventListener('click', () => {
 });
 
 
-sources.addEventListener('click', () => {
+fadeClick.addEventListener('click', () => {
 	fadeAnimate();
 });
 

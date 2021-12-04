@@ -130,7 +130,17 @@ body {
 	color: gainsboro;
 }
 
+.subtitleText {
+	text-align: center;
+}
+
 .src {
+	display: inherit;
+	justify-content: space-around;
+	flex-grow: 1;
+}
+
+.ctrl {
 	display: inherit;
 	justify-content: space-around;
 	flex-grow: 1;
