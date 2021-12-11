@@ -2,6 +2,7 @@
 /dist
 /.cache
 /tsw
+/.DS_Store
 
 **/guide/
 
