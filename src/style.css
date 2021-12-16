@@ -126,6 +126,7 @@ body {
 	display: inherit;
 	flex-direction: column;
 	padding: 50px 0;
+	gap: 20px;
 	justify-content: space-around;
 	font-size: 50px;
 	color: gainsboro;
@@ -210,65 +211,57 @@ body {
 	animation: fadeInOut 1s linear forwards;
 }
 
-
-/* Grid Properties Migrated from sytleMain file  */
-
-#kpBtn1 {
-	/* margin: 25px; */
-	height: 90px;
-	width: 90px;
-	/* font-size: 12px; */
-	border-radius: 100%;
-}
-
-#kpBtn2 {
-	/* margin: 25px; */
-	height: 90px;
-	width: 90px;
-	/* font-size: 12px; */
-	border-radius: 100%;
-}
-
-#kpBtn3 {
-	/* margin: 25px; */
-	height: 90px;
-	width: 90px;
-	/* font-size: 12px; */
-	border-radius: 100%;
-}
-#kpBtn4 {
-	/* margin: 25px; */
-	height: 90px;
-	width: 90px;
-	/* font-size: 12px; */
-	border-radius: 100%;
-}
-
-#kpBtn5 {
-	/* margin: 25px; */
-	height: 90px;
-	width: 90px;
-	/* font-size: 12px; */
-	border-radius: 100%;
-}
-
-.grid {
-	display: flex; /* establish flex container */
-	flex-wrap: wrap; /* enable flex items to wrap */
+.navigation {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	gap: 10px;
 }
+
+.row1 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
+.row2 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: center;
+	gap: 10px;
+}
+
+.row3 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
+.row4 {
+	display: inherit;
+	padding: 10px 0 0 0;
+	gap: 10px;
+}
+
+.navBtn {
+	height: 90px;
+	width: 90px;
+	border-radius: 100%;
+}
+
 .keypad {
-	flex: 0 0 100px; /* don't grow, don't shrink, width */
-	height: 100px;
+	display: inherit;
+	/* flex: 0 0 100px;  don't grow, don't shrink, width */
+	/* height: 100px; */
 	/* background-color: rgb(145, 19, 107); */
-	margin: 1px;
+	/* margin: 1px; */
 }
 
 .menu {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	flex: 0 0 100px; /* don't grow, don't shrink, width */
+	display: inherit;
+}
+
+.menuBtn {
 	height: 100px;
-	margin-top: 5px;
+	width: 150px;
 }
