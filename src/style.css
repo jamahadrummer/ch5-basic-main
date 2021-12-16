@@ -124,7 +124,9 @@ body {
 
 .subtitle {
 	display: inherit;
+	flex-direction: column;
 	padding: 50px 0;
+	gap: 20px;
 	justify-content: space-around;
 	font-size: 50px;
 	color: gainsboro;
@@ -207,4 +209,59 @@ body {
 
 .elementToFadeInAndOut {
 	animation: fadeInOut 1s linear forwards;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+
+.row1 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
+.row2 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: center;
+	gap: 10px;
+}
+
+.row3 {
+	display: inherit;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
+.row4 {
+	display: inherit;
+	padding: 10px 0 0 0;
+	gap: 10px;
+}
+
+.navBtn {
+	height: 90px;
+	width: 90px;
+	border-radius: 100%;
+}
+
+.keypad {
+	display: inherit;
+	/* flex: 0 0 100px;  don't grow, don't shrink, width */
+	/* height: 100px; */
+	/* background-color: rgb(145, 19, 107); */
+	/* margin: 1px; */
+}
+
+.menu {
+	display: inherit;
+}
+
+.menuBtn {
+	height: 100px;
+	width: 150px;
 }
