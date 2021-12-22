@@ -130,6 +130,7 @@ body {
 	justify-content: space-around;
 	font-size: 50px;
 	color: gainsboro;
+	max-height: 700px;
 }
 
 .subtitleText {
@@ -264,4 +265,5 @@ body {
 .menuBtn {
 	height: 100px;
 	width: 150px;
+	border-radius: 5%;
 }
