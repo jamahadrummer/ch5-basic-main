@@ -6,12 +6,12 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"liveserver": "npx webpack serve",
 		"build": "npx webpack --config webpack.config.js",
-		"archive": "ch5-cli archive -p ch5basic_2021_12_04 -d dist -o tsw"
+		"archive": "ch5-cli archive -p ch5basic_2021_12_22 -d dist -o tsw"
 	},
 	"author": "Daniel Jama",
 	"license": "MIT",
 	"dependencies": {
-		"@crestron/ch5-crcomlib": "^1.1.2",
+		"@crestron/ch5-crcomlib": "^1.2.0",
 		"@fortawesome/fontawesome-free": "^5.15.4"
 	},
 	"devDependencies": {
