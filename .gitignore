@@ -3,7 +3,6 @@
 /.cache
 /tsw
 /.DS_Store
-.package-lock.json
 **/guide/
 
 **/.parcel-cache/
