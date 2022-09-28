@@ -33,7 +33,7 @@
 // window['bridgeReceiveStringFromNative'] = bridgeReceiveStringFromNative;
 // window['bridgeReceiveObjectFromNative'] = bridgeReceiveObjectFromNative;
 
-const crComLib = require('../node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
+const crComLib = require('../node_modules/ch5-crcomlib-lite/build_bundles/cjs/cr-com-lib.js');
 
 window.crComLib = crComLib;
 window.bridgeReceiveIntegerFromNative = crComLib.bridgeReceiveIntegerFromNative;
@@ -41,10 +41,14 @@ window.bridgeReceiveBooleanFromNative = crComLib.bridgeReceiveBooleanFromNative;
 window.bridgeReceiveStringFromNative = crComLib.bridgeReceiveStringFromNative;
 window.bridgeReceiveObjectFromNative = crComLib.bridgeReceiveObjectFromNative;
 
+const launchBtns = document.querySelectorAll('launchBts')
+launchBtns.forEach(launchBtns => launchBtns.addEventListener('click', cresInteract, {
+}));
+
 const titleBtn = document.getElementById('titleBtn');
-const launchBtnA = document.getElementById('launchBtnA');
-const launchBtnB = document.getElementById('launchBtnB');
-const launchBtnC = document.getElementById('launchBtnC');
+// const launchBtnA = document.getElementById('launchBtnA');
+// const launchBtnB = document.getElementById('launchBtnB');
+// const launchBtnC = document.getElementById('launchBtnC');
 const footBtnA = document.getElementById('footBtnA');
 const footBtnB = document.getElementById('footBtnB');
 const footBtnC = document.getElementById('footBtnC');
@@ -82,13 +86,13 @@ function cresInteract(num1) {
 };
 
 // Animation Timing JS
-function fadeAnimate() {
-	eleFade1.classList.add('elementToFadeInAndOut');
-	eleFade2.classList.add('elementToFadeInAndOut');
-	setTimeout(() => {
-		div.classList.remove('elementToFadeInAndOut');
-	}, 4000);
-}
+// function fadeAnimate() {
+// 	eleFade1.classList.add('elementToFadeInAndOut');
+// 	eleFade2.classList.add('elementToFadeInAndOut');
+// 	setTimeout(() => {
+// 		div.classList.remove('elementToFadeInAndOut');
+// 	}, 4000);
+// }
 
 // crComLib.subscribeState('s', 1, (value) => {
 // 	const elem = document.getElementById('room-name');
@@ -129,31 +133,31 @@ titleBtn.addEventListener('click', () => {
 });
 
 
-fadeClick.addEventListener('click', () => {
-	fadeAnimate();
-});
+// fadeClick.addEventListener('click', () => {
+// 	fadeAnimate();
+// });
 
 
-launchBtnA.addEventListener('click', () => {
-	cresInteract('41');
-	setTimeout(function () {
-		pageTurn('localPC.html');
-	}, 1000);
-});
+// launchBtnA.addEventListener('click', () => {
+// 	cresInteract('41');
+// 	setTimeout(function () {
+// 		pageTurn('localPC.html');
+// 	}, 1000);
+// });
 
-launchBtnB.addEventListener('click', () => {
-	cresInteract('42');
-	setTimeout(function () {
-		pageTurn('cable.html');
-	}, 1000);
-});
+// launchBtnB.addEventListener('click', () => {
+// 	cresInteract('42');
+// 	setTimeout(function () {
+// 		pageTurn('cable.html');
+// 	}, 1000);
+// });
 
-launchBtnC.addEventListener('click', () => {
-	cresInteract('43');
-	setTimeout(function () {
-		pageTurn('appleTV.html');
-	}, 1000);
-});
+// launchBtnC.addEventListener('click', () => {
+// 	cresInteract('43');
+// 	setTimeout(function () {
+// 		pageTurn('appleTV.html');
+// 	}, 1000);
+// });
 
 footBtnA.addEventListener('click', () => {
 	cresInteract('60');
@@ -197,5 +201,3 @@ footBtnE.addEventListener('click', () => {
 //     });
 
 // launchBtnA.addEventListener('click');
-
-console.log('!!!SCRIPTEND!!!');
