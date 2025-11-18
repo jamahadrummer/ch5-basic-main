@@ -27,19 +27,19 @@
 //code should be executed at startup of the project. 
 ////////////////////////////////////////////////////////////////////////////
 // import { bridgeReceiveIntegerFromNative, bridgeReceiveBooleanFromNative, bridgeReceiveStringFromNative, bridgeReceiveObjectFromNative }
-// 	from '@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib';
+// 	from '@crestron/ch5-CrComLib/build_bundles/cjs/cr-com-lib';
 // window['bridgeReceiveIntegerFromNative'] = bridgeReceiveIntegerFromNative;
 // window['bridgeReceiveBooleanFromNative'] = bridgeReceiveBooleanFromNative;
 // window['bridgeReceiveStringFromNative'] = bridgeReceiveStringFromNative;
 // window['bridgeReceiveObjectFromNative'] = bridgeReceiveObjectFromNative;
 
-const crComLib = require('../node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
+const CrComLib = require('../node_modules/@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js');
 
-window.crComLib = crComLib;
-window.bridgeReceiveIntegerFromNative = crComLib.bridgeReceiveIntegerFromNative;
-window.bridgeReceiveBooleanFromNative = crComLib.bridgeReceiveBooleanFromNative;
-window.bridgeReceiveStringFromNative = crComLib.bridgeReceiveStringFromNative;
-window.bridgeReceiveObjectFromNative = crComLib.bridgeReceiveObjectFromNative;
+window.CrComLib = CrComLib;
+window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
+window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
+window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
+window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
 
 const titleBtn = document.getElementById('titleBtn');
 const launchBtnA = document.getElementById('launchBtnA');
@@ -60,8 +60,8 @@ const fadeClick = document.querySelector('.launchBtn');
 
 //Digital Join function and listeners
 // function onClick1(digitalJoin) {
-// 	crComLib.publishEvent('b', digitalJoin, true);
-// 	crComLib.publishEvent('b', digitalJoin, false);
+// 	CrComLib.publishEvent('b', digitalJoin, true);
+// 	CrComLib.publishEvent('b', digitalJoin, false);
 // }
 // launchBtnA.addEventListener('click', onClick1('1'));
 // launchBtnB.addEventListener('click', onClick1('2'));
@@ -73,10 +73,10 @@ const fadeClick = document.querySelector('.launchBtn');
 //parameter with the Simpl Digital Join number desired
 function cresInteract(num1) {
 	console.log('Button has been Pushed');
-	crComLib.publishEvent('b', num1, 'true');
+	CrComLib.publishEvent('b', num1, 'true');
 	console.log(num1, 'High');
 	setTimeout(() => {
-		crComLib.publishEvent('b', num1, 'false');
+		CrComLib.publishEvent('b', num1, 'false');
 	}, 500);
 	console.log(num1, 'Low');
 };
@@ -90,12 +90,12 @@ function fadeAnimate() {
 	}, 4000);
 }
 
-// crComLib.subscribeState('s', 1, (value) => {
+// CrComLib.subscribeState('s', 1, (value) => {
 // 	const elem = document.getElementById('room-name');
 // 	elem.innerHTML = value;
 // });
 
-// crComLib.subscribeState('s', 2, (value) => {
+// CrComLib.subscribeState('s', 2, (value) => {
 // 	const elem = document.getElementsByClassName('subtitle');
 // 	elem.innerHTML = value;
 // });
